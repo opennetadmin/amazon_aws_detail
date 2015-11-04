@@ -1,0 +1,14 @@
+<?php
+
+// Copy this example to /opt/ona/etc/amazon_aws_detail.conf.php
+//
+// You can create a key/secret for each region that is required
+//
+// These keys should be set to read only
+
+$awsRegionKeys['us-west-2'] = array(
+  'key'    => 'ASLDKJ23-ITS-A-KEY',
+  'secret' => '3hp-its-a-secret-wOG',
+);
+
+?>
