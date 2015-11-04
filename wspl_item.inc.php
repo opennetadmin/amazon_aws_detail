@@ -123,10 +123,13 @@ EOL;
         }
 
         // Connect with creds, should only be readonly
-        $ec2client = Ec2Client::factory(array(
-            'key'    => $awsRegionKeys[$awsregionlower]['key'],
-            'secret' => $awsRegionKeys[$awsregionlower]['secret'],
-            'region' => $awsregionlower
+        $ec2client = new Ec2Client(array(
+            'version'     => 'latest',
+            'region'      => $awsregionlower,
+            'credentials' => [
+              'key'    => $awsRegionKeys[$awsregionlower]['key'],
+              'secret' => $awsRegionKeys[$awsregionlower]['secret'],
+            ],
         ));
 
 
